@@ -1,0 +1,328 @@
+@charset "utf-8";
+
+/*全体の設定
+---------------------------------------------------------------------------*/
+html {
+  font-size: 62.5%;/* 1rem=10px */
+}
+
+body {
+  background: #19261e;
+  color: #fff;
+  margin: 0 auto;
+  font: 16px/2.0 "ヒラギノ明朝 Pro","メイリオ", Meiryo, "ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro";
+}
+
+
+/* コンテンツ -------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: 750px;
+  min-width: 320px;
+  border-left: 1px solid rgb(107, 254, 238,0.3);
+  border-right: 1px solid rgb(107, 254, 238,0.3);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+img  {
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+section {
+  position: relative;
+  padding: clamp(1.5rem,3vw,2.5rem) clamp(3rem,6.2vw,5rem);
+}
+section > .box {
+  display: flex;
+  gap: clamp(2rem,4vw,7rem);
+}
+section > .box div {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem,3vw,3rem);
+}
+h3 + p {
+  color: rgb(255, 255, 255);
+}
+
+
+
+/* 見出し ---------------*/
+h1 {
+  font-size: clamp(3.6rem,7.5vw,6rem);
+  letter-spacing: 0.3em;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+h2 {
+  font-size: clamp(2.2rem,4.5vw,3.6rem);
+}
+.box > h2 {
+  writing-mode: vertical-lr;
+  font-family: "Times New Roman";
+  letter-spacing: 0.3rem;
+  white-space: nowrap;
+  text-decoration-skip-ink: none;
+}
+
+h3 {
+  font-size: clamp(2rem,4vw,2.4rem);
+  line-height: 1.5em;
+}
+/* 見出し end---------------*/
+
+
+/* top --------------------*/
+#top {
+  position: relative;
+}
+#top nav{
+  font-size: clamp(1.6rem,3.3vw,2rem);
+  display: flex;
+  gap: clamp(3.5rem,7.3vw,9rem);
+  position: absolute;
+  top: clamp(1rem,2vw,3rem);
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* top end--------------------*/
+
+
+/* menu --------------------*/
+.figure-lists {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem,4vw,3rem);
+}
+
+.figure-list {
+  position: relative;
+}
+
+.figure-list button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.figure-list button a {
+  background-color: rgb(0, 0, 0,0.3);
+  width: clamp(5em,14vw,12em);
+  padding: clamp(0.5rem,1vw,1.5rem) 0;
+  font-family: "Times New Roman";
+  font-size: clamp(2rem,4vw,3rem);
+}
+/* menu end--------------------*/
+
+
+/* footer ---------------*/
+footer {
+  padding: 2rem clamp(3rem,6.2vw,5rem) clamp(2rem,4vw,4rem);
+  text-align: center;
+  background-color: #222d26;
+}
+
+footer nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(3rem,6.2vw,5rem);
+}
+footer nav > a {
+  font-size: clamp(2rem,4vw,3.6rem);
+}
+footer .g-menu {
+  display: flex;
+  gap: 1rem clamp(2rem,4vw,3rem);
+  margin-top: clamp(0.5rem,1vw,1rem);
+  flex-wrap: wrap;
+  line-height: 1em;
+}
+
+footer .info-wrap {
+  display: flex;
+  justify-content: space-around;
+  margin-top: clamp(2rem,4vw,3rem);
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  line-height: 1em;
+  font-size: smaller;
+}
+
+footer .info-wrap li {
+  position: relative;
+  text-align: left;
+  padding-left: 1rem;
+  border-left: 0.15rem solid #6bfeee;
+  line-height: 1em;
+}
+footer .info-wrap a {
+  text-decoration: underline;
+  text-decoration-color: rgb(255, 255, 255,0.7);
+}
+
+footer .info-wrap li a::after,footer nav > a::after {
+  content: none;
+}
+/* footer end---------------*/
+
+footer + p {
+  text-align: center;
+  letter-spacing: 0.1em;
+  font-size: smaller;
+  padding: 1em 0;
+}
+
+/* コンテンツ end-------------------------------------------- */
+
+
+
+
+/* もっと見るボタン ---------------*/
+.btn-wrap {
+  margin: clamp(3rem,6.2vw,5rem) auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.btn {
+  width: fit-content;
+  font-size: clamp(1.4rem,2.9vw,2rem);
+  border: 0.1rem solid #fff;
+  margin: 0 clamp(1rem,2vw,3rem);
+  padding: 0 3em;
+  white-space: nowrap;
+  text-align: center;
+  transition: all .25s;
+  -webkit-transition: all .25s;
+}
+.btn:hover {
+  background-color: rgb(248, 252, 251,0.9);
+  color: #333;
+}
+
+.btn-wrap div {
+  display: flex;
+  align-items: center;
+}
+
+hr {
+  width: 100%;
+  border: none;
+  border-bottom: 0.1rem solid #6bfeee;
+  margin: 0 auto;
+}
+/* もっと見るボタン end---------------*/
+
+
+/* ネオン設定 ---------------*/
+.neon {
+  text-shadow: 0 -0.4rem 1rem,0 0 0.02rem,0 0 1em #6bfeee,
+    0 0 0.1em #6bfeee,0 0 0.2em #6bfeee,0 0 0.3em #6bfeee,
+    0 0 0.4em #00d6af,0 0 0.5em #00d6af,0 0 0.6em #00d6af,
+    0 0.05rem 0.03rem #000;
+  -webkit-text-shadow: 0 -0.4rem 1rem,0 0 0.02rem,0 0 1em #6bfeee,
+    0 0 0.1em #6bfeee,0 0 0.2em #6bfeee,0 0 0.3em #6bfeee,
+    0 0 0.4em #00d6af,0 0 0.5em #00d6af,0 0 0.6em #00d6af,
+    0 0.05rem 0.03rem #000;
+}
+
+.neon-line {
+  width: 100%;
+  margin-top: -0.1rem;
+  border-bottom: 0.02rem solid #fff;
+  box-shadow: 0 -0.4rem 1rem,0 0 0.02rem,0 0 1em #6bfeee,
+    0 0 0.1em #6bfeee,0 0 0.2em #6bfeee,0 0 0.3em #6bfeee,
+    0 0 0.4em #00d6af,0 0 0.5em #00d6af,
+    0 0 0.6em #00d6af,0 0.05rem 0.03rem #000;
+  -webkit-box-shadow: 0 -0.4rem 1rem,0 0 0.02rem,0 0 1em #6bfeee,
+    0 0 0.1em #6bfeee,0 0 0.2em #6bfeee,0 0 0.3em #6bfeee,
+    0 0 0.4em #00d6af,0 0 0.5em #00d6af,
+    0 0 0.6em #00d6af,0 0.05rem 0.03rem #000;
+}
+
+.overline {
+  text-decoration-line: overline;
+  margin-right: 0.3rem;
+}
+
+.underline {
+  text-decoration-line: underline;
+  margin-left: 0.35rem;
+}
+/* ネオン設定 end---------------*/
+
+
+/* リンク関連 -------------------*/
+a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a:hover {
+  color: #6bfeee;
+}
+
+/* マウスオンアニメーション -----*/
+/* 下線が真ん中から両方に広がる */
+a::after {
+  position: absolute;
+  bottom: 0.1rem;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 0.15rem;
+  background: #6bfeee;
+  transform: scale(0, 1);
+  transform-origin: center top;
+  transition: .3s;
+  -webkit-transition: .3s;
+}
+
+.btn-wrap a::after {
+  content: none;
+}
+
+a:hover::after {
+  transform: scale(1, 1);
+}
+/* 下線が真ん中から両方に広がる end */
+/* マウスオンアニメーション end-----*/
+
+/* リンク関連 end----------------*/
+
+
+
+/* メディアクエリ（スマホ表示用のCSS）---------------- */
+@media screen and (max-width: 599px) {
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+
+
+@media screen and (max-width: 479px) {
+  body {
+    font-size: 1.4rem;
+  }
+}
+
+/* メディアクエリ end------------------------------ */

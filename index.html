@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Limers</title>
+  <link href="css/reset.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    // スムーズスクロール
+    $(function () {
+      // ページ内リンクをクリックすると
+      $('a[href^=#]').click(function () {
+        // スクロールスピード
+        var speed = 500;
+        // クリックしたリンク先を保存
+        var href = $(this).attr("href");
+        // クリックしたリンク先が#または空のときは
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        // トップへ移動する
+        var position = target.offset().top;
+        // リンク先へスムーズに移動する
+        $("html, body").animate({
+          scrollTop: position
+        }, speed, "swing");
+        return false;
+      });
+    });
+  </script>
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+</head>
+
+
+<body>
+  <!-- コンテンツ start -->
+  <div class="container">
+
+    <!-- top -->
+    <div id="top">
+      <img src="img/top.png">
+      <nav>
+        <a href="#about">about</a>
+        <a href="#quality">quality</a>
+        <a href="#menu">menu</a>
+        <a href="#access">access</a>
+      </nav>
+      <h1 class="neon">Limers</h1>
+    </div>
+    <!-- top end-->
+
+
+    <!-- about -->
+    <section id="about">
+      <div class="box">
+        <h2 class="neon overline">what is "Limers"?</h2>
+        <div>
+          <img src="img/shop.png">
+          <h3>ライムを楽しむ大人の空間</h3>
+          <p>
+            私達はライムが好きな人たちのことを"Limers"と呼びます。<br>
+            そんなLimersが集まれる、落ち着いた雰囲気と空間を目指したお店です。
+            既に好きな人はもちろん、少し苦手な人でも口にしやすいお食事をご用意してお待ちしております。
+          </p>
+        </div>
+      </div>
+      <div class="btn-wrap">
+        <div><hr></div>
+        <a class="btn">view more</a>
+        <div><hr></div>
+      </div>
+    </section>
+    <!-- about end-->
+
+
+    <!-- quality -->
+    <section id="quality">
+      <div class="box">
+        <h2 class="neon overline">lime's quality</h2>
+        <div>
+          <img src="img/quality.png">
+          <h3>香りを決める鮮度を徹底キープ</h3>
+          <p>
+            ライムの1番の特徴と言えば、清涼感のある香り。
+            この香りの高さは、鮮度の高さに比例します。<br>
+            Limersで使うライムは、農薬を使用しない国産品。<br>
+            毎日、その日使う分だけ仕入れることで、無駄なく新鮮なライムを提供します。
+        </div>
+      </div>
+      <div class="btn-wrap">
+        <div><hr></div>
+        <a class="btn">view more</a>
+        <div><hr></div>
+      </div>
+    </section>
+    <!-- quality end-->
+
+
+    <!-- menu -->
+    <section id="menu">
+      <div class="box">
+        <h2 class="neon overline">menu</h2>
+        <div>
+          <h3>主役にも脇役にもライムが活きる料理</h3>
+          <p>
+            ライムの爽やかな香りを活かせる、厳選した食材を使用したお食事をご用意しています。
+            メインのお料理やお飲み物はもちろん、デザートからもライムを味わうことができます。
+          </p>
+          <ul class="figure-lists">
+            <li class="figure-list">
+              <img src="img/menu1.png">
+              <button>
+                <a>food</a>
+              </button>
+            </li>
+            <li class="figure-list">
+              <img src="img/menu2.png">
+              <button>
+                <a>drink</a>
+              </button>
+            </li>
+            <li class="figure-list">
+              <img src="img/menu3.png">
+              <button>
+                <a>dessert</a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="btn-wrap">
+        <div><hr></div>
+        <a class="btn">view all</a>
+        <div><hr></div>
+      </div>
+    </section>
+    <!-- menu end-->
+
+
+    <!-- access -->
+    <section id="access">
+      <div class="box">
+        <h2 class="neon overline">access</h2>
+        <div>
+          <img src="img/map.png">
+          <p>
+            〒123-4567　柑橘県清涼市酸味町1丁目1-1<br>
+            「ライム駅」北口から徒歩8分
+          </p>
+        </div>
+      </div>
+      <div class="btn-wrap">
+        <div><hr></div>
+        <a class="btn">view map</a>
+        <div><hr></div>
+      </div>
+    </section>
+    <!-- access end-->
+
+      
+    <!-- footer -->
+    <footer>
+      <nav>
+        <a class="neon" href="#top">Limers</a>
+        <div class="g-menu">
+          <a href="#about">about</a>
+          <a href="#quality">quality</a>
+          <a href="#menu">menu</a>
+          <a href="#access">access</a>
+        </div>
+      </nav>
+      <ul class="info-wrap">
+        <li><a>012-3456-7891</a></li>
+        <li>17:00〜23:00</li>
+        <li>水曜日定休</li>
+      </ul>
+    </footer>
+
+    <p>©2022 Limers.All Rights Reserved.</p>
+
+    <div class="neon-line"></div>
+    <!-- footer end-->
+    
+  </div>
+
+  <!-- コンテンツ end -->
+</body>
+
+</html>
